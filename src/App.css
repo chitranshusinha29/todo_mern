@@ -1,38 +1,179 @@
-.App {
-  text-align: center;
+/* ---------- RESET ---------- */
+* {
+  box-sizing: border-box;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
+body {
+  margin: 0;
+  font-family: "Segoe UI", Arial, sans-serif;
+  background: linear-gradient(135deg, #667eea, #764ba2);
   min-height: 100vh;
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  align-items: center;
+}
+
+/* ---------- MAIN CARD ---------- */
+.container {
+  width: 480px;
+  background: #ffffff;
+  padding: 22px;
+  border-radius: 16px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+}
+
+.container.dark {
+  background: #1e293b;
+  color: #e5e7eb;
+}
+
+/* ---------- HEADER ---------- */
+.top {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.top h2 {
+  flex: 1;
+  margin: 0;
+}
+
+/* ---------- INPUTS ---------- */
+input,
+select {
+  width: 100%;
+  padding: 10px 12px;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+  font-size: 14px;
+  margin-top: 10px;
+}
+
+.container.dark input,
+.container.dark select {
+  background: #0f172a;
+  color: white;
+  border: 1px solid #334155;
+}
+
+/* ---------- FILTER BUTTONS ---------- */
+.filters {
+  display: flex;
+  gap: 8px;
+  margin-top: 10px;
+}
+
+.filters button {
+  flex: 1;
+}
+
+/* ---------- ADD TASK ---------- */
+.input-box {
+  display: flex;
+  gap: 8px;
+  margin-top: 12px;
+}
+
+.input-box input {
+  flex: 2;
+}
+
+.input-box select {
+  flex: 1;
+}
+
+.input-box button {
+  flex: 1;
+}
+
+/* ---------- BUTTONS ---------- */
+button {
+  border: none;
+  border-radius: 10px;
+  padding: 8px 12px;
+  font-size: 14px;
+  cursor: pointer;
+  background: #6366f1;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+button:hover {
+  background: #4f46e5;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.logout {
+  background: #ef4444;
+}
+
+.logout:hover {
+  background: #dc2626;
+}
+
+/* ---------- TODO LIST ---------- */
+ul {
+  list-style: none;
+  padding: 0;
+  margin-top: 16px;
+}
+
+li {
+  display: flex;
+  align-items: center;
+  background: #f8fafc;
+  padding: 14px;
+  border-radius: 14px;
+  margin-bottom: 12px;
+  gap: 12px;
+}
+/* ---------- COMPLETED ---------- */
+li.done span {
+  text-decoration: line-through;
+  opacity: 0.6;
+}
+
+/* ---------- PRIORITY COLORS ---------- */
+.High {
+  border-left: 6px solid #ef4444;
+}
+.Medium {
+  border-left: 6px solid #f59e0b;
+}
+.Low {
+  border-left: 6px solid #10b981;
+}
+
+/* ---------- ACTION ICONS ---------- */
+.actions {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.actions button {
+  background: transparent;
+  border: none;
+  font-size: 18px;
+  cursor: pointer;
+  padding: 4px;
+}
+
+.actions button:hover {
+  transform: scale(1.15);
+}
+
+/* ---------- LOGIN ---------- */
+.login {
+  width: 360px;
+  background: white;
+  padding: 22px;
+  border-radius: 16px;
+  text-align: center;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.25);
+}
+
+.login span {
+  color: #6366f1;
+  cursor: pointer;
+  font-weight: 600;
 }
